@@ -1,13 +1,10 @@
 import './App.css';
+import Header from './molecules/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Aqui va la App.
-        </p>
-      </header>
+      <Header />
     </div>
   );
 }

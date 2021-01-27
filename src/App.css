@@ -1,20 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --darkblue: hsla(209, 23%, 22%, 1);
+  --dark-mode-text: white;
+}
+
 .App {
-  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  background-color: var(--darkblue);
+  color: var(--dark-mode-text);
+  padding: 0 16px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+
+.Header-title {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.Mode-CTA {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-mode-text);
+  font-size: 12px;
+
 }
