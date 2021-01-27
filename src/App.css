@@ -28,5 +28,10 @@
   border: none;
   color: var(--dark-mode-text);
   font-size: 12px;
+  display: flex;
+  align-items: center;
+}
 
+.Mode-CTA__icon {
+  margin-right: 8px;
 }
