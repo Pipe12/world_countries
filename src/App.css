@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
-  --darkblue: hsl(209, 23%, 22%);
+  --dark-blue: hsl(209, 23%, 22%);
   --dark-mode-text: white;
   --very-dark-blue: hsl(207, 26%, 17%);
   --light-mode-text: hsl(200, 15%, 8%);
@@ -13,14 +13,8 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.Main {
-  min-height: 100vh;
-  background-color: var(--very-dark-blue);
-  padding: 0 16px;
-}
-
 .Header {
-  background-color: var(--darkblue);
+  background-color: var(--dark-blue);
   color: var(--dark-mode-text);
   padding: 32px 16px;
   display: flex;
@@ -48,20 +42,43 @@
   margin-right: 8px;
 }
 
+.Main {
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+  padding: 40px 16px 40px 16px;
+}
+
 .Search {
-  border: 1px solid red;
-  padding: 10px 16px;
-  background-color: var(--very-dark-blue); 
+  /* border: 1px solid red; */
+  padding: 16px 16px 16px 32px;
+  background-color: var(--dark-blue); 
   color: var(--dark-mode-text);
   display: flex;
   align-items: center;
+  border-radius: 5px;
+}
+
+.Search:focus {
+  outline: red;
 }
 
 .Search__icon {
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
 }
 
 .Search__input {
-  border: 1px solid orange;
-  background-color: var(--very-dark-blue);
+  /* border: 1px solid orange; */
+  background-color: var(--dark-blue);
+  color: var(--dark-mode-text);
+  margin-left: 24px;
+  width: 100%;
+  border: none;
+}
+
+.Search__input::placeholder {
+  color: var(--dark-mode-text); 
+}
+
+.Search__input:focus {
+  outline: none;
 }
