@@ -1,24 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
-  --darkblue: hsla(209, 23%, 22%, 1);
+  --darkblue: hsl(209, 23%, 22%);
   --dark-mode-text: white;
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
 }
 
 .App {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.Main {
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+  padding: 0 16px;
+}
+
 .Header {
   background-color: var(--darkblue);
   color: var(--dark-mode-text);
-  padding: 0 16px;
+  padding: 32px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .Header-title {
+  margin: 0;
   font-size: 14px;
   font-weight: 800;
 }
@@ -30,8 +41,27 @@
   font-size: 12px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .Mode-CTA__icon {
   margin-right: 8px;
+}
+
+.Search {
+  border: 1px solid red;
+  padding: 10px 16px;
+  background-color: var(--very-dark-blue); 
+  color: var(--dark-mode-text);
+  display: flex;
+  align-items: center;
+}
+
+.Search__icon {
+  border: 1px solid greenyellow;
+}
+
+.Search__input {
+  border: 1px solid orange;
+  background-color: var(--very-dark-blue);
 }
