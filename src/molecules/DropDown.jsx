@@ -2,7 +2,7 @@ import React from 'react';
 import DropDownButton from '../atoms/DropDownButton';
 import DropDownList from '../atoms/DropDownList';
 
-const DropDown = () => {
+const DropDown = ({ continents }) => {
   return (
     <div className='DropDown'>
       <DropDownButton />

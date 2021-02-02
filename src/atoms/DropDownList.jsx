@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DropDownList = () => {
+const DropDownList = ({continents}) => {
   return (
     <ul className='DropDownList'>
       <a href='/'>

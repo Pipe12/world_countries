@@ -48,11 +48,29 @@
 .Main {
   min-height: 100vh;
   background-color: var(--dark-mode-background);
-  padding: 40px 16px 40px 16px;
+  padding: 0 16px 0 16px;
+}
+
+.SearchLayout {
+  display: grid;
+  grid-template-rows: 50px 50px;
+
+  row-gap: 40px;
+  padding-top: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .SearchLayout {
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 50px;
+  }
 }
 
 .Search {
   /* border: 1px solid red; */
+
+  max-width: 480px;
+  max-height: 17px;
   padding: 16px 16px 16px 32px;
   background-color: var(--dark-mode-element); 
   color: var(--dark-mode-text);
@@ -63,10 +81,6 @@
 
 .Search:focus {
   outline: red;
-}
-
-.Search__icon {
-  /* border: 1px solid greenyellow; */
 }
 
 .Search__input {
@@ -119,4 +133,5 @@
 .DropDownList a {
   text-decoration: none;
   color: var(--dark-mode-text);
+  z-index: 9;
 }

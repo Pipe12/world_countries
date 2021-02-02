@@ -1,12 +1,15 @@
 import React from 'react';
+import SearchLayout from '../layouts/SearchLayout';
 import Search from '../molecules/Search';
 import DropDown from '../molecules/DropDown';
 
 const Main = () => {
   return (
     <main className='Main'>
-      <Search />
-      <DropDown />
+      <SearchLayout>
+        <Search />
+        <DropDown />
+      </SearchLayout>
     </main>
   )
 }
