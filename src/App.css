@@ -2,11 +2,14 @@
 
 :root {
   --dark-blue: hsl(209, 23%, 22%);
-  --dark-mode-text: white;
-  --very-dark-blue: hsl(207, 26%, 17%);
-  --light-mode-text: hsl(200, 15%, 8%);
+  --darker-blue: hsl(207, 26%, 17%);
+  --darkest-blue: hsl(200, 15%, 8%);
   --dark-gray: hsl(0, 0%, 52%);
   --very-light-gray: hsl(0, 0%, 98%);
+  
+  --dark-mode-background: var(--darker-blue);
+  --dark-mode-element: var(--dark-blue);
+  --dark-mode-text: white;
 }
 
 .App {
@@ -14,7 +17,7 @@
 }
 
 .Header {
-  background-color: var(--dark-blue);
+  background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
   padding: 32px 16px;
   display: flex;
@@ -44,14 +47,14 @@
 
 .Main {
   min-height: 100vh;
-  background-color: var(--very-dark-blue);
+  background-color: var(--dark-mode-background);
   padding: 40px 16px 40px 16px;
 }
 
 .Search {
   /* border: 1px solid red; */
   padding: 16px 16px 16px 32px;
-  background-color: var(--dark-blue); 
+  background-color: var(--dark-mode-element); 
   color: var(--dark-mode-text);
   display: flex;
   align-items: center;
@@ -68,7 +71,7 @@
 
 .Search__input {
   /* border: 1px solid orange; */
-  background-color: var(--dark-blue);
+  background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
   margin-left: 24px;
   width: 100%;
@@ -81,4 +84,39 @@
 
 .Search__input:focus {
   outline: none;
+}
+
+.DropDown {
+  width: 200px;
+}
+
+.DropDownButton {
+  background-color: var(--dark-mode-element);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 16px 20px 16px 24px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  color: var(--dark-mode-text);
+}
+
+.DropDownList {
+  background-color: var(--dark-mode-element);
+  border-radius: 5px;
+  padding: 20px 24px;
+  margin: 3px 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  list-style: none;
+  line-height: 32px;
+}
+
+.DropDownList a {
+  text-decoration: none;
+  color: var(--dark-mode-text);
 }

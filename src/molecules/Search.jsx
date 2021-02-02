@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsSearch } from 'react-icons/bs'
+import { BsSearch } from 'react-icons/bs';
 
 const Search = () => {
   return (
@@ -12,7 +12,6 @@ const Search = () => {
         placeholder='Searck for a country...'
       />
     </div>
-
   )
 }
 
