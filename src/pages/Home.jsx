@@ -2,11 +2,11 @@ import React from 'react';
 import Header from '../molecules/Header';
 import Main from '../molecules/Main';
 
-const Home = () => {
+const Home = ({ countries }) => {
   return (
     <>
       <Header />
-      <Main />
+      <Main countries={countries}/>
     </>
   )
 }
