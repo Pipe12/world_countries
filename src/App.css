@@ -150,10 +150,13 @@
 .CountryCard {
   border: 1px solid rosybrown;
   max-width: 265px;
+  border-radius: 5px;
 }
 
 .CountryCard__link {
   /* border: 1px solid greenyellow; */
+  color: var(--dark-mode-text);
+  text-decoration: none;
 }
 
 .CountryCard__link li{
@@ -167,4 +170,8 @@
 
 .CountryFlag img {
   width: 100%;
+}
+
+.CardInfo {
+  margin: 0 24px 0 24px;
 }
