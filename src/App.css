@@ -102,6 +102,7 @@
 
 .DropDown {
   width: 200px;
+  /* z-index: 9; */
 }
 
 .DropDownButton {
@@ -133,5 +134,37 @@
 .DropDownList a {
   text-decoration: none;
   color: var(--dark-mode-text);
-  z-index: 9;
+}
+
+.CountriesLayout {
+  border: 1px solid red;
+}
+
+.CountriesLayout__list {
+  border: 1px solid blueviolet;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.CountryCard {
+  border: 1px solid rosybrown;
+  max-width: 265px;
+}
+
+.CountryCard__link {
+  /* border: 1px solid greenyellow; */
+}
+
+.CountryCard__link li{
+  border: 1px solid orange;
+
+}
+
+.CountryFlag {
+  margin: 0;
+}
+
+.CountryFlag img {
+  width: 100%;
 }
