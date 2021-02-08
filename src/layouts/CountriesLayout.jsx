@@ -12,6 +12,14 @@ const CountriesLayout = ({ children }) => {
             { children }
           </li>
         </a>
+        <a 
+          href='/'
+          className='CountryCard__link'
+        >
+          <li>
+            { children }
+          </li>
+        </a>
       </ul>
     </section>
   )

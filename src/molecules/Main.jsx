@@ -11,7 +11,7 @@ const Main = ({ countries }) => {
     <main className='Main'>
       <SearchLayout>
         <Search />
-        {/* <DropDown /> */}
+        <DropDown />
       </SearchLayout>
       <CountriesLayout>
           <CountryCard Colombia={Colombia} />

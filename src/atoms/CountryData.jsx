@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CountryData = () => {
+const CountryData = ({population, region, captial}) => {
   return (
-    <div>
-      <p><span className='key'>Population:</span> 206,135,893</p>
-      <p><span className='key'>Population:</span> 206,135,893</p>
-      <p><span className='key'>Population:</span> 206,135,893</p>
+    <div className='CountryData'>
+      <p><span className='CountryDataKey'>Population:</span> {population}</p>
+      <p><span className='CountryDataKey'>Region:</span> {region}</p>
+      <p><span className='CountryDataKey'>Captial:</span> {captial}</p>
     </div>
   )
 }

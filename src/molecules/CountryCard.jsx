@@ -6,7 +6,7 @@ const CountryCard = ({ Colombia }) => {
   return (
     <div className='CountryCard'>
       <CountryFlag Colombia={Colombia} />
-      <CardInfo />
+      <CardInfo Country={Colombia}/>
     </div>
   )
 }
