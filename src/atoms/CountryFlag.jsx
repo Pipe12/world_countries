@@ -1,7 +1,6 @@
 import React from 'react';
 
-const CountryFlag = ({ Colombia }) => {
-  const { name, flag } = Colombia;
+const CountryFlag = ({ name, flag }) => {
   return (
     <figure className='CountryFlag'>
       <img src={flag} alt={name}/>

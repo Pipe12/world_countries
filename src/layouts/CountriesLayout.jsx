@@ -1,25 +1,24 @@
 import React from 'react';
+import CountryCard from '../molecules/CountryCard';
 
-const CountriesLayout = ({ children }) => {
+const CountriesLayout = ({ countries }) => {
+  console.log(countries);
   return (
     <section className='CountriesLayout'>
       <ul className='CountriesLayout__list'>
-        <a 
-          href='/'
-          className='CountryCard__link'
-        >
-          <li>
-            { children }
-          </li>
-        </a>
-        <a 
-          href='/'
-          className='CountryCard__link'
-        >
-          <li>
-            { children }
-          </li>
-        </a>
+        {
+          countries.map((country, index) => 
+            <a
+              href='/'
+              className='CountryCard__link'
+              key={index}
+            >
+              <li>
+                <CountryCard country={country}/>
+              </li>
+            </a>
+          )
+        }
       </ul>
     </section>
   )

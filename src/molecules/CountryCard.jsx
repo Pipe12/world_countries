@@ -2,11 +2,26 @@ import React from 'react';
 import CountryFlag from '../atoms/CountryFlag';
 import CardInfo from './CardInfo';
 
-const CountryCard = ({ Colombia }) => {
+const CountryCard = ({ country }) => {
+  const { 
+          name,
+          flag,
+          population,
+          region,
+          capital
+        } = country
   return (
     <div className='CountryCard'>
-      <CountryFlag Colombia={Colombia} />
-      <CardInfo Country={Colombia}/>
+      <CountryFlag
+        name={name}
+        flag={flag}
+      />
+      <CardInfo
+        name={name}
+        population={population}
+        region={region}
+        capital={capital}
+      />
     </div>
   )
 }

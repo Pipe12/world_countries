@@ -14,10 +14,10 @@ function App() {
     try {
       const response = await fetch(url);
       const countries = await response.json();
-      setCountries(countries);
+      setCountries(countries.slice(0, 10));
       setLoading(false);
     } catch (error) {
-      console.error(error);
+      console.error(error); 
     }
   }
 

@@ -48,7 +48,7 @@
 .Main {
   min-height: 100vh;
   background-color: var(--dark-mode-background);
-  padding: 0 16px 0 16px;
+  padding: 0 16px 40px 16px;
 }
 
 .SearchLayout {
