@@ -1,34 +1,29 @@
 import React from 'react';
 
-const DropDownList = ({continents}) => {
+const DropDownList = ({ regions }) => {
   return (
-    <ul className='DropDownList'>
-      <a href='/'>
-        <li>
-          Africa
-        </li>
-      </a>
-      <a href='/'>
-        <li>
-          America
-        </li>
-      </a>
-      <a href='/'>
-        <li>
-          Asia
-        </li>
-      </a>
-      <a href='/'>
-        <li>
-          Europe
-        </li>
-      </a>
-      <a href='/'>
-        <li>
-          Oceania
-        </li>
-      </a>
-    </ul>
+    <>
+      {
+        regions.length !== 0
+          ? (
+              <ul className='DropDownList'>
+                {
+                  regions.map( (region, index) => (
+                    <a 
+                      href='/'
+                      key={index}
+                    >
+                      <li>
+                        { region }
+                      </li>
+                    </a>
+                  ))
+                }
+              </ul>
+            )
+          : null 
+      }
+    </>
   )
 }
 

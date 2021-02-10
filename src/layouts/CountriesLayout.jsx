@@ -2,7 +2,6 @@ import React from 'react';
 import CountryCard from '../molecules/CountryCard';
 
 const CountriesLayout = ({ countries }) => {
-  console.log(countries);
   return (
     <section className='CountriesLayout'>
       <ul className='CountriesLayout__list'>

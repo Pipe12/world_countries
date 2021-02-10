@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import Loading from './atoms/Loading';
+import { Regions } from './utils/regions';
 import './App.css';
 
 const url = 'https://restcountries.eu/rest/v2/all';
@@ -8,6 +9,7 @@ const url = 'https://restcountries.eu/rest/v2/all';
 function App() {
   const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
+  const [regions, setRegions] = useState(Regions);
 
   const fetchCountries = async () => {
     setLoading(true);
@@ -30,7 +32,10 @@ function App() {
       {
         loading 
           ? <Loading />
-          : <Home countries={countries} />
+          : <Home 
+            countries={countries}
+            regions={regions}
+          />
       }
     </div>
   );
