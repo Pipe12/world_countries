@@ -9,7 +9,7 @@ const url = 'https://restcountries.eu/rest/v2/all';
 function App() {
   const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
-  const [regions, setRegions] = useState(Regions);
+  const [regions, setRegions] = useState([]);
 
   const fetchCountries = async () => {
     setLoading(true);
@@ -25,7 +25,11 @@ function App() {
 
   useEffect(() => {
     fetchCountries();
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    setRegions(Regions);
+  }, []);
 
   return (
     <div className="App">
