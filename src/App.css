@@ -19,7 +19,8 @@
 .Header {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
-  padding: 32px 16px;
+  padding: 0 16px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,6 +40,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 0;
 }
 
 .Mode-CTA__icon {
@@ -56,21 +58,14 @@
   grid-template-rows: 50px 50px;
 
   row-gap: 40px;
-  padding-top: 24px;
-}
-
-@media only screen and (min-width: 768px) {
-  .SearchLayout {
-    grid-template-columns: 1fr 200px;
-    grid-template-rows: 50px;
-  }
+  padding: 30px 0 30px 0;
 }
 
 .Search {
   /* border: 1px solid red; */
-
+  
   max-width: 480px;
-  max-height: 17px;
+  /* max-height: 17px; */
   padding: 16px 16px 16px 32px;
   background-color: var(--dark-mode-element); 
   color: var(--dark-mode-text);
@@ -100,6 +95,7 @@
   outline: none;
 }
 
+
 .DropDown {
   width: 200px;
   z-index: 9;
@@ -120,6 +116,7 @@
   color: var(--dark-mode-text);
 }
 
+
 .DropDownList {
   background-color: var(--dark-mode-element);
   border-radius: 5px;
@@ -131,20 +128,17 @@
   line-height: 32px;
 }
 
+
 .DropDownList a {
   text-decoration: none;
   color: var(--dark-mode-text);
 }
 
 .CountriesLayout {
-  /* border: 1px solid red; */
-  margin-top: 30px;
   margin-bottom: 24px;
-  
 }
 
 .CountriesLayout__list {
-  /* border: 1px solid blueviolet; */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -155,9 +149,7 @@
   justify-content: center;
 }
 
-
 .CountryCard__link {
-  /* border: 1px solid greenyellow; */
   color: var(--dark-mode-text);
   text-decoration: none;
   border-radius: 5px;
@@ -172,7 +164,6 @@
 }
 
 .CountryCard__link li{
-  /* border: 1px solid orange; */
   width: fit-content;
 }
 
@@ -186,4 +177,49 @@
 
 .CardInfo {
   margin: 0 24px 0 24px;
+}
+
+@media only screen and (min-width: 992px) {
+  .Header {
+    padding: 0 80px;
+  }
+
+  .Header-title {
+    font-size: 24px;
+  }
+
+  .Main {
+    padding: 0 80px 40px 80px;
+  }
+
+  .Mode-CTA {
+    font-size: 16px;
+  }
+
+  .Mode-CTA__icon {
+    margin-right: 12px;
+  }
+
+  .SearchLayout {
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 55px;
+  }
+
+  .Search__icon {
+    width: 22px;
+  }
+
+  .Search__input {
+    font-size: 14px;
+  }
+
+  .DropDownButton {
+    font-size: 14px;
+    padding: 18px 20px 18px 24px;
+  }
+
+  .DropDownList {
+    font-size: 14px;
+    line-height: 35px;
+  }
 }
