@@ -1,15 +1,20 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 
-const DropDownButton = () => {
+const DropDownButton = ({ handleDropDownButton, showRegions }) => {
   return (
     <button
       className='DropDownButton'
       type="button" 
       id="dropdownMenuButton"
+      onClick={handleDropDownButton}
     >
       Filter by Region
-      <BsChevronDown />
+      {
+        showRegions 
+          ? <BsChevronUp /> 
+          : <BsChevronDown />
+      }
     </button>
   )
 }
