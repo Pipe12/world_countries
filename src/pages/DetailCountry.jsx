@@ -4,26 +4,25 @@ import Loading from '../atoms/Loading';
 
 const DetailCountry = (props) => {
   const { alpha3Code } = useParams();
-  const url = `https://restcountries.eu/rest/v2/alpha/${alpha3Code}`;
-
   const [loading, setLoading] = useState(true);
   const [country, setCountry] = useState([])
 
-  const fetchCountry = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(url);
-      const country = await response.json();
-      setCountry(country);
-      setLoading(false);
-    } catch (error) {
-      console.error(error); 
-    }
-  }
+  const url = `https://restcountries.eu/rest/v2/alpha/${alpha3Code}`;
 
   useEffect(() => {
+    const fetchCountry = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(url);
+        const country = await response.json();
+        setCountry(country);
+        setLoading(false);
+      } catch (error) {
+        console.error(error); 
+      }
+    }
     fetchCountry();
-  }, []);
+  }, [ url ]);
 
   return (
     <>
