@@ -12,10 +12,6 @@
   --dark-mode-text: white;
 }
 
-.App {
-  font-family: 'Nunito Sans', sans-serif;
-}
-
 .Header {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);

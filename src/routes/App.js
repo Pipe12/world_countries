@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Home from './pages/Home';
-import Loading from './atoms/Loading';
-import { Regions } from './utils/regions';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from '../pages/Home';
+import DetailCountry from '../pages/DetailCountry';
+import Loading from '../atoms/Loading';
+import { Regions } from '../utils/regions';
+import '../assets/styles/App.css';
 
 const url = 'https://restcountries.eu/rest/v2/all';
 
@@ -36,10 +38,21 @@ function App() {
       {
         loading 
           ? <Loading />
-          : <Home 
-            countries={countries}
-            regions={regions}
-          />
+          : (
+            <Router>
+              <Switch>
+                <Route exact path='/'>
+                  <Home 
+                    countries={countries}
+                    regions={regions}
+                  />
+                </Route>
+                <Route exact path='/country/:name'>
+                  <DetailCountry />
+                </Route>
+              </Switch>
+            </Router>
+          ) 
       }
     </div>
   );

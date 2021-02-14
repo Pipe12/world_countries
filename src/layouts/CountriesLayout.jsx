@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CountryCard from '../molecules/CountryCard';
 
 const CountriesLayout = ({ countries }) => {
@@ -7,15 +8,15 @@ const CountriesLayout = ({ countries }) => {
       <ul className='CountriesLayout__list'>
         {
           countries.map((country, index) => 
-            <a
-              href='/'
+            <Link
+              to={`/country/${country.name}`}
               className='CountryCard__link'
               key={index}
             >
               <li>
                 <CountryCard country={country}/>
               </li>
-            </a>
+            </Link>
           )
         }
       </ul>
