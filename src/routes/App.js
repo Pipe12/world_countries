@@ -47,7 +47,7 @@ function App() {
                     regions={regions}
                   />
                 </Route>
-                <Route exact path='/country/:name'>
+                <Route exact path='/country/:alpha3Code'>
                   <DetailCountry />
                 </Route>
               </Switch>

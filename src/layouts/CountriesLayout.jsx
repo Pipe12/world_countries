@@ -9,7 +9,7 @@ const CountriesLayout = ({ countries }) => {
         {
           countries.map((country, index) => 
             <Link
-              to={`/country/${country.name}`}
+              to={`/country/${country.alpha3Code}`}
               className='CountryCard__link'
               key={index}
             >

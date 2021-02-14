@@ -2,14 +2,14 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const DetailCountry = (props) => {
-  let { name } = useParams();
+  let { alpha3Code } = useParams();
 
   return (
     <>
       <Link to='/'>
         Regresar
       </Link>
-      <h2>{name}</h2>
+      <h2>{alpha3Code}</h2>
     </>
   )
 }
