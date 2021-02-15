@@ -5,6 +5,7 @@ import Header from '../molecules/Header';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
 import BackButton from '../atoms/BackButton';
 import CountryFlag from '../atoms/CountryFlag';
+import DetailCountryInfo from '../layouts/DetailCountryInfo';
 
 const DetailCountry = (props) => {
   const { alpha3Code } = useParams();
@@ -41,6 +42,7 @@ const DetailCountry = (props) => {
                   name={country.name}
                   flag={country.flag}
                 />
+                <DetailCountryInfo country={country}/>
               </DetailCountryLayout>
             </>
       }

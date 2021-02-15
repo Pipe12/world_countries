@@ -164,6 +164,8 @@
 }
 
 .CountryFlag {
+  border: 1px solid rebeccapurple;
+
   margin: 0;
 }
 
@@ -173,6 +175,11 @@
 
 .CardInfo {
   margin: 0 24px 0 24px;
+}
+
+.CountryDataKey {
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .DetailCountryLayout {
@@ -203,6 +210,19 @@
   border: 1px solid green;
   font-size: 18px;
   margin-right: 10px;
+}
+
+.DetailCountryInfo {
+  border: 1px solid burlywood;
+
+  color: var(--dark-mode-text);
+}
+
+.DetailCountryTitle {
+  border: 1px solid chocolate;
+
+  margin: 0;
+  font-size: 22px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -262,5 +282,9 @@
   .BackIcon {
     font-size: 22px;
     margin-right: 12px;
+  }
+
+  .DetailCountryTitle {
+    font-size: 32px;
   }
 }
