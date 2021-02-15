@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Loading from '../atoms/Loading';
+import Header from '../molecules/Header';
+import DetailCountryLayout from '../layouts/DetailCountryLayout';
+import BackButton from '../atoms/BackButton';
+import CountryFlag from '../atoms/CountryFlag';
 
 const DetailCountry = (props) => {
   const { alpha3Code } = useParams();
@@ -30,10 +34,14 @@ const DetailCountry = (props) => {
         loading 
           ? <Loading />
           : <>
-              <Link to='/'>
-                Regresar
-              </Link>
-              <h2>{country.name}</h2>
+              <Header />
+              <DetailCountryLayout>
+                <BackButton />
+                <CountryFlag
+                  name={country.name}
+                  flag={country.flag}
+                />
+              </DetailCountryLayout>
             </>
       }
     </>

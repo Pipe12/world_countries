@@ -175,6 +175,36 @@
   margin: 0 24px 0 24px;
 }
 
+.DetailCountryLayout {
+  border: 1px solid orange;
+
+  background-color: var(--dark-mode-background);
+  min-height: 100vh;
+  padding: 40px 28px 64px 28px;
+  /* display: grid; */
+}
+
+.BackButton {
+  border: 1px solid red;
+  
+  background-color: var(--dark-mode-element);
+  color: var(--dark-mode-text);
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px 24px 10px 24px;
+}
+
+.BackIcon {
+  border: 1px solid green;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
 @media only screen and (min-width: 992px) {
   .Header {
     padding: 0 80px;
@@ -217,5 +247,20 @@
   .DropDownList {
     font-size: 14px;
     line-height: 35px;
+  }
+
+  .DetailCountryLayout {
+    padding: 80px;
+  }
+
+  .BackButton {
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 14px 40px 14px 40px;
+  }
+  
+  .BackIcon {
+    font-size: 22px;
+    margin-right: 12px;
   }
 }
