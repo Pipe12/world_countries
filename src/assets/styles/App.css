@@ -164,7 +164,7 @@
 }
 
 .CountryFlag {
-  border: 1px solid rebeccapurple;
+  border: 1px solid greenyellow;
 
   margin: 0;
 }
@@ -223,6 +223,14 @@
 
   margin: 0;
   font-size: 22px;
+}
+
+.DetailCountryBasic {
+  border: 1px solid cyan;
+}
+
+.DetailCountrySecundary {
+  border: 1px solid fuchsia;
 }
 
 @media only screen and (min-width: 992px) {

@@ -1,23 +1,14 @@
 import React from 'react';
 import DetailCountryTitle from '../atoms/DetailCountryTitle';
-import DetailCountryFacts from '../atoms/DetailCountryFacts';
+import DetailCountryBasic from '../atoms/DetailCountryBasic';
+import DetailCountrySecundary from '../atoms/DetailCountrySecundary';
 
 const DetailCountryInfo = ({ country }) => {
-  const { name } = country ;
-
-  const getBasicInfo = ({ nativeName, population, subregion, capital}) => {
-    return { nativeName, population, subregion, capital}
-  };
-
-  const getSecundaryInfo = ({ topLevelDomain, currencies, languages }) => {
-    return { topLevelDomain, currencies, languages }
-  };
-
   return (
     <section className='DetailCountryInfo'>
-      <DetailCountryTitle name={name} />
-      <DetailCountryFacts info={getBasicInfo(country)} />
-      <DetailCountryFacts info={getSecundaryInfo(country)} />
+      <DetailCountryTitle {...country} />
+      <DetailCountryBasic {...country}/>
+      <DetailCountrySecundary {...country} />
     </section>
   )
 }
