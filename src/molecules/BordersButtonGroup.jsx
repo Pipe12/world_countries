@@ -3,7 +3,7 @@ import React from 'react';
 const BordersButtonGroup = ({ children }) => {
 
   return (
-    <div>
+    <div className='BordersButtonGroup'>
       { children }
     </div>
   )

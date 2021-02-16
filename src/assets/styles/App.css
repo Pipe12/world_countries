@@ -164,8 +164,6 @@
 }
 
 .CountryFlag {
-  border: 1px solid greenyellow;
-
   margin: 0;
 }
 
@@ -183,21 +181,18 @@
 }
 
 .DetailCountryLayout {
-  border: 1px solid orange;
-
   background-color: var(--dark-mode-background);
-  min-height: 100vh;
+  min-height: 100%;
   padding: 40px 28px 64px 28px;
   /* display: grid; */
 }
 
 .BackButton {
-  border: 1px solid red;
-  
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
   font-family: inherit;
   font-size: 14px;
+  border: none;
   border-radius: 2px;
   display: flex;
   align-items: center;
@@ -207,46 +202,40 @@
 }
 
 .BackIcon {
-  border: 1px solid green;
   font-size: 18px;
   margin-right: 10px;
 }
 
 .DetailCountryInfo {
-  border: 1px solid burlywood;
-
+  display: grid;
+  row-gap: 30px;
   color: var(--dark-mode-text);
 }
 
 .DetailCountryTitle {
-  border: 1px solid chocolate;
-
   margin: 0;
   font-size: 22px;
 }
 
-.DetailCountryBasic {
-  border: 1px solid cyan;
-}
-
-.DetailCountrySecundary {
-  border: 1px solid fuchsia;
-}
-
 .DetailCountryBorders {
-  border: 1px solid yellow;
+  display: grid;
+  gap: 24px;
 }
 
 .DetailCountrySubTitle {
-  border: 1px solid blue;
-
   margin: 0;
   font-size: 16px;
   font-weight: 600;
 }
 
+.BordersButtonGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 10px;
+  text-align: center;
+}
+
 .BorderButton {
-  /* border:1px solid chartreuse; */
   border: none;
   border-radius: 2px;
   font-family: inherit;
@@ -255,6 +244,7 @@
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
   padding: 10px 16px 10px 16px;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 992px) {
