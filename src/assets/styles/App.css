@@ -233,6 +233,30 @@
   border: 1px solid fuchsia;
 }
 
+.DetailCountryBorders {
+  border: 1px solid yellow;
+}
+
+.DetailCountrySubTitle {
+  border: 1px solid blue;
+
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.BorderButton {
+  /* border:1px solid chartreuse; */
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--dark-mode-element);
+  color: var(--dark-mode-text);
+  padding: 10px 16px 10px 16px;
+}
+
 @media only screen and (min-width: 992px) {
   .Header {
     padding: 0 80px;

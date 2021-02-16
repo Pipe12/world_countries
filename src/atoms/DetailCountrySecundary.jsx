@@ -10,8 +10,8 @@ const DetailCountryBasic = ({ topLevelDomain, currencies, languages }) => {
           currencies.map((currency, index) => {
             return (
               (currencies.length === index + 1)
-                ? <span>{currency.name}</span>
-                : <span>{currency.name}, </span>
+                ? <span key={index}>{currency.name}</span>
+                : <span key={index}>{currency.name}, </span>
             )
           })
         }
@@ -22,8 +22,8 @@ const DetailCountryBasic = ({ topLevelDomain, currencies, languages }) => {
           languages.map((language, index) => {
             return (
               (languages.length === index + 1)
-                ? <span> {language.name}</span>
-                : <span> {language.name}, </span>
+                ? <span key={index}> {language.name}</span>
+                : <span key={index}> {language.name}, </span>
             )
           })
           }
