@@ -167,13 +167,15 @@ body {
   width: fit-content;
 }
 
-.CountryFlag {
+.CountryCardFlag {
   margin: 0;
   width: 100%;
 }
 
-.CountryFlag img {
+.CountryCardFlag img {
   width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 
 .CardInfo {
@@ -211,6 +213,10 @@ body {
 .BackIcon {
   font-size: 18px;
   margin-right: 10px;
+}
+
+.DetailCountryFlag img {
+  width: 100%;
 }
 
 .DetailCountryInfo {
@@ -310,6 +316,10 @@ body {
 
   .DetailCountryLayout {
     padding: 80px;
+  }
+
+  .CountryFlag img {
+    /* height: 100%; */
   }
 
   .BackButton {

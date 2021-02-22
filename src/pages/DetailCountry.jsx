@@ -4,7 +4,7 @@ import Loading from '../atoms/Loading';
 import Header from '../molecules/Header';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
 import BackButton from '../atoms/BackButton';
-import CountryFlag from '../atoms/CountryFlag';
+import DetailCountryFlag from '../atoms/DetailCountryFlag';
 import DetailCountryInfo from '../layouts/DetailCountryInfo';
 
 const DetailCountry = (props) => {
@@ -38,7 +38,7 @@ const DetailCountry = (props) => {
               <Header />
               <DetailCountryLayout>
                 <BackButton />
-                <CountryFlag
+                <DetailCountryFlag
                   name={country.name}
                   flag={country.flag}
                 />

@@ -1,5 +1,5 @@
 import React from 'react';
-import CountryFlag from '../atoms/CountryFlag';
+import CountryCardFlag from '../atoms/CountryCardFlag';
 import CardInfo from './CardInfo';
 
 const CountryCard = ({ country }) => {
@@ -12,7 +12,7 @@ const CountryCard = ({ country }) => {
         } = country
   return (
     <div className='CountryCard'>
-      <CountryFlag
+      <CountryCardFlag
         name={name}
         flag={flag}
       />
