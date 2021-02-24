@@ -4,9 +4,11 @@ import BordersButtonGroup from './BordersButtonGroup';
 import BorderButton from '../atoms/BorderButton';
 
 const DetailCountryBorders = ({ borders }) => {
+  
   const [countryBorders, setCountryBorders] = useState([]);
 
-  const url = `https://restcountries.eu/rest/v2/alpha?codes=${borders.join(';')}`;
+  borders = borders.join(';');
+  const  url = `https://restcountries.eu/rest/v2/alpha?codes=${borders}`;
 
   useEffect(() => {
     const fetchCountry = async () => {
@@ -21,16 +23,23 @@ const DetailCountryBorders = ({ borders }) => {
     fetchCountry();
   }, [ url ]);
 
-  console.log(countryBorders);
-
   return (
     <div className='DetailCountryBorders'>
       <DetailCountrySubTitle text='Border Countries:' />
       <BordersButtonGroup>
         {
-          countryBorders.map((border, index) => {
-            return <BorderButton key={index} border={border.name} />
-          })
+          countryBorders.length > 0
+            ? (
+              countryBorders.map((border, index) => {
+                return (
+                  <BorderButton 
+                    key={index}
+                    {...border}
+                  />
+                ) 
+              })
+            )
+            : null
         }
       </BordersButtonGroup>
     </div>

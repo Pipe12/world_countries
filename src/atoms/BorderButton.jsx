@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BorderButton = ({ border }) => {
+const BorderButton = ({ alpha3Code, name }) => {
   return (
     <Link
-      to={`/country/${border}`}
+      to={`/country/${alpha3Code}`}
       className='BorderButton'
 
     >
-      {border}
+      {name}
     </Link>
   )
 }
