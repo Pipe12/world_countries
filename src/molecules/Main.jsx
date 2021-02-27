@@ -4,12 +4,15 @@ import Search from '../molecules/Search';
 import DropDown from '../molecules/DropDown';
 import CountriesLayout from '../layouts/CountriesLayout';
 
-const Main = ({ countries, regions }) => {
+const Main = ({ countries, regions, filterByRegion }) => {
   return (
     <main className='Main'>
       <SearchLayout>
         <Search />
-        <DropDown regions={regions}/>
+        <DropDown 
+          regions={regions}
+          filterByRegion={filterByRegion}
+        />
       </SearchLayout>
       <CountriesLayout countries={ countries } />
     </main>

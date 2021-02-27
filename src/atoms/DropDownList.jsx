@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DropDownList = ({ regions }) => {
+const DropDownList = ({ regions, filterByRegion }) => {
   return (
     <>
       {
@@ -9,14 +9,12 @@ const DropDownList = ({ regions }) => {
               <ul className='DropDownList'>
                 {
                   regions.map( (region, index) => (
-                    <a 
-                      href='/'
+                    <li 
                       key={index}
+                      onClick={() => filterByRegion(region)}
                     >
-                      <li>
-                        { region }
-                      </li>
-                    </a>
+                      { region }
+                    </li>
                   ))
                 }
               </ul>

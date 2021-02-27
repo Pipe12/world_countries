@@ -129,9 +129,9 @@ body {
 }
 
 
-.DropDownList a {
-  text-decoration: none;
+.DropDownList li {
   color: var(--dark-mode-text);
+  cursor: pointer;
 }
 
 .CountriesLayout {

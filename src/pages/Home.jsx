@@ -11,13 +11,15 @@ const Home = () => {
   const [regions, setRegions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
+  const [countriesRef, setCountriesRef] = useState([]);
 
   const fetchCountries = async () => {
     setLoading(true);
     try {
       const response = await fetch(url);
       const countries = await response.json();
-      setCountries(countries.slice(0, 10));
+      setCountries(countries);
+      setCountriesRef(countries);
       setLoading(false);
     } catch (error) {
       console.error(error); 
@@ -32,6 +34,11 @@ const Home = () => {
     setRegions(Regions)
   }, []);
 
+  const filterByRegion = (region) => {
+    let regionCountries = countriesRef.filter(country => country.region === region);
+    setCountries(regionCountries);
+  }
+
   return (
     <>
       {
@@ -42,6 +49,7 @@ const Home = () => {
               <Main
                 countries={countries}
                 regions={regions}
+                filterByRegion={filterByRegion}
               />
             </>
       }
