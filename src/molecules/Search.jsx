@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
 
-const Search = () => {
+const Search = ({ filterByCountry }) => {
   return (
     <div className='Search'>
       <BsSearch className='Search__icon'/>
@@ -10,6 +10,7 @@ const Search = () => {
         type='text'
         name='country'
         placeholder='Searck for a country...'
+        onChange={filterByCountry}
       />
     </div>
   )

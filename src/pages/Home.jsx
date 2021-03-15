@@ -39,6 +39,13 @@ const Home = () => {
     setCountries(regionCountries);
   }
 
+  const filterByCountry = (event) => {
+    let PATTERN = event.target.value;
+    PATTERN = PATTERN.charAt(0).toUpperCase() + PATTERN.slice(1);
+    let filtered = countriesRef.filter((country) =>  country.name.includes(PATTERN));
+    setCountries(filtered);
+  }
+
   return (
     <>
       {
@@ -50,6 +57,7 @@ const Home = () => {
                 countries={countries}
                 regions={regions}
                 filterByRegion={filterByRegion}
+                filterByCountry={filterByCountry}
               />
             </>
       }
