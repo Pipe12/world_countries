@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-:root {
-  --dark-blue: hsl(209, 23%, 22%);
-  --darker-blue: hsl(207, 26%, 17%);
-  --darkest-blue: hsl(200, 15%, 8%);
-  --dark-gray: hsl(0, 0%, 52%);
-  --very-light-gray: hsl(0, 0%, 98%);
-  
-  --dark-mode-background: var(--darker-blue);
-  --dark-mode-element: var(--dark-blue);
-  --dark-mode-text: white;
-}
-
-body {
-  background-color: var(--dark-mode-background);
-}
-
 .Header {
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
@@ -49,7 +33,7 @@ body {
 
 .Main {
   min-height: 100vh;
-  background-color: var(--dark-mode-background);
+  /* background-color: var(--dark-mode-background); */
   padding: 0 16px 40px 16px;
 }
 
