@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../molecules/Header';
 import Main from '../molecules/Main';
 import { Regions } from '../utils/regions';
 import Loading from '../atoms/Loading';
@@ -52,7 +51,6 @@ const Home = () => {
         loading 
           ? <Loading />
           : <>
-              <Header />
               <Main
                 countries={countries}
                 regions={regions}

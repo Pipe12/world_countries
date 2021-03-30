@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from '../atoms/Loading';
-import Header from '../molecules/Header';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
 import BackButton from '../atoms/BackButton/BackButton';
 import DetailCountryFlag from '../atoms/DetailCountryFlag';
 import DetailCountryInfo from '../layouts/DetailCountryInfo';
 
-const DetailCountry = (props) => {
+const DetailCountry = () => {
   const { alpha3Code } = useParams();
   const [loading, setLoading] = useState(true);
   const [country, setCountry] = useState([])
@@ -35,7 +34,6 @@ const DetailCountry = (props) => {
         loading 
           ? <Loading />
           : <>
-              <Header />
               <DetailCountryLayout>
                 <BackButton />
                 <DetailCountryFlag
