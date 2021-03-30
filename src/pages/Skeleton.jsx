@@ -1,10 +1,10 @@
 import Header from '../molecules/Header';
 
-const Skeleton = ({ children }) => {
+const Skeleton = ({ children, toggleTheme }) => {
 
   return (
     <div className='App'>
-      <Header />
+      <Header toggleTheme={toggleTheme}/>
       { children }
     </div>
   )

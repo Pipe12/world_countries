@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../themes';
@@ -9,10 +9,21 @@ import DetailCountry from '../pages/DetailCountry';
 import '../assets/styles/App.css';
 
 function App() {
+
+  const [theme, setTheme] = useState('dark');
+
+  const toggleTheme = () => {
+    if(theme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Skeleton>
+      <Skeleton toggleTheme={toggleTheme}>
         {
           <Router>
             <Switch>

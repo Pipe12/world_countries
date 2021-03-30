@@ -2,11 +2,11 @@ import React from 'react';
 import HeaderTitle from '../atoms/HeaderTitle';
 import ModeCTA from '../atoms/ModeCTA';
 
-const Header = () => {
+const Header = ({ toggleTheme }) => {
   return (
     <header className='Header'>
       <HeaderTitle />
-      <ModeCTA />
+      <ModeCTA toggleTheme={toggleTheme}/>
     </header>
   )
 }
