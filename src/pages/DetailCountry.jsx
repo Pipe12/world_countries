@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../atoms/Loading';
 import Header from '../molecules/Header';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
-import BackButton from '../atoms/BackButton';
+import BackButton from '../atoms/BackButton/BackButton';
 import DetailCountryFlag from '../atoms/DetailCountryFlag';
 import DetailCountryInfo from '../layouts/DetailCountryInfo';
 

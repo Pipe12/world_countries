@@ -1,18 +1,16 @@
-import React from 'react';
-import { BsArrowLeft } from 'react-icons/bs';
 import { useHistory } from 'react-router-dom';
+import { StyledBackButton, StyledButtonIcon } from './StyledBackButton';
 
 const BackButton = () => {
   const history = useHistory()
   return (
-    <button
+    <StyledBackButton
       onClick={() => history.goBack()}
-      className='BackButton'
       type="button" 
     >
-      <BsArrowLeft className='BackIcon'/>
+      <StyledButtonIcon/>
       Back
-    </button>
+    </StyledBackButton>
   )
 }
 
