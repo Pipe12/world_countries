@@ -214,18 +214,6 @@
   text-align: center;
 }
 
-.BorderButton {
-  border: none;
-  border-radius: 2px;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  background-color: var(--dark-mode-element);
-  color: var(--dark-mode-text);
-  padding: 10px 16px 10px 16px;
-  text-decoration: none;
-}
-
 .Loading {
   width: 100vw;
   height: 100vh;

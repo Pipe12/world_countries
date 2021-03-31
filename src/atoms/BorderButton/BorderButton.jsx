@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { StyledBorderButton } from './StyledBorderButton';
 
 const BorderButton = ({ alpha3Code, name }) => {
   return (
-    <Link
+    <StyledBorderButton
       to={`/country/${alpha3Code}`}
       className='BorderButton'
-
     >
       {name}
-    </Link>
+    </StyledBorderButton>
   )
 }
 

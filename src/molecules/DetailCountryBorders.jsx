@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from 'react';
 import DetailCountrySubTitle from '../atoms/DetailCountrySubTitle';
 import BordersButtonGroup from './BordersButtonGroup';
-import BorderButton from '../atoms/BorderButton';
+import BorderButton from '../atoms/BorderButton/BorderButton';
 
 const DetailCountryBorders = ({ borders }) => {
   

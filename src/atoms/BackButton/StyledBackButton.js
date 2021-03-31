@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { BsArrowLeft } from 'react-icons/bs';
 
 export const StyledBackButton = styled.button`
-  background-color: var(--dark-mode-element);
-  color: var(--dark-mode-text);
+  background-color: var(${({theme}) => theme.backgroundElement});
+  color: var(${({theme}) => theme.text});
   font-family: inherit;
   font-size: 14px;
   border: none;
