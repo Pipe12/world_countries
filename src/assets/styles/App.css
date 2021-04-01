@@ -171,11 +171,6 @@
   width: 100%;
 }
 
-.DetailCountryTitle {
-  margin: 0;
-  font-size: 22px;
-}
-
 .DetailCountryBorders {
   display: grid;
   gap: 24px;
@@ -250,11 +245,6 @@
     row-gap: 50px;
     margin-top: 50px;
     margin-bottom: 40px;
-  }
-
-  .DetailCountryTitle {
-    font-size: 32px;
-    grid-column: 1 / 3;
   }
 
   .DetailCountryLayout {

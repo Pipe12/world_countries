@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledDetailCountryTitle } from './StyledDetailCountryTitle';
 
 const DetailCountryTitle = ({ name }) => {
   return (
-    <h1 className='DetailCountryTitle'>
+    <StyledDetailCountryTitle>
       { name }
-    </h1>
+    </StyledDetailCountryTitle>
   )
 }
 
