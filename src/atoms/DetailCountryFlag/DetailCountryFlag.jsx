@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledDetailCountryFlag } from './StyledDetailCountryFlag';
 
 const DetailCountryFlag = ({ name, flag }) => {
   return (
-    <figure className='DetailCountryFlag'>
+    <StyledDetailCountryFlag>
       <img src={flag} alt={name}/>
-    </figure>
+    </StyledDetailCountryFlag>
   )
 }
 

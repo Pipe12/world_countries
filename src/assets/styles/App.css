@@ -164,10 +164,6 @@
   justify-items: start;
 }
 
-.DetailCountryFlag img {
-  width: 100%;
-}
-
 .DetailCountryInfo {
   display: grid;
   row-gap: 30px;

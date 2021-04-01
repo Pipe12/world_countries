@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../atoms/Loading';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
 import BackButton from '../atoms/BackButton/BackButton';
-import DetailCountryFlag from '../atoms/DetailCountryFlag';
+import DetailCountryFlag from '../atoms/DetailCountryFlag/DetailCountryFlag';
 import DetailCountryInfo from '../layouts/DetailCountryInfo';
 
 const DetailCountry = () => {
