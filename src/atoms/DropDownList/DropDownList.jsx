@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyledDropDownList } from './StyledDropDownList';
 
 const DropDownList = ({ regions, filterByRegion }) => {
   return (
@@ -6,7 +7,7 @@ const DropDownList = ({ regions, filterByRegion }) => {
       {
         regions.length !== 0
           ? (
-              <ul className='DropDownList'>
+              <StyledDropDownList>
                 {
                   regions.map( (region, index) => (
                     <li 
@@ -17,7 +18,7 @@ const DropDownList = ({ regions, filterByRegion }) => {
                     </li>
                   ))
                 }
-              </ul>
+              </StyledDropDownList>
             )
           : null 
       }

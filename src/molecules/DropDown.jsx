@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DropDownButton from '../atoms/DropDownButton/DropDownButton';
-import DropDownList from '../atoms/DropDownList';
+import DropDownList from '../atoms/DropDownList/DropDownList';
 
 const DropDown = ({ regions, filterByRegion }) => {
   const [showRegions, setShowRegions] = useState(false);
