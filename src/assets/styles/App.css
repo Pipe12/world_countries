@@ -85,22 +85,6 @@
   z-index: 9;
 }
 
-.DropDownButton {
-  background-color: var(--dark-mode-element);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  padding: 16px 20px 16px 24px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 12px;
-  color: var(--dark-mode-text);
-}
-
-
 .DropDownList {
   background-color: var(--dark-mode-element);
   border-radius: 5px;
@@ -224,11 +208,6 @@
 
   .Search__input {
     font-size: 14px;
-  }
-
-  .DropDownButton {
-    font-size: 14px;
-    padding: 18px 20px 18px 24px;
   }
 
   .DropDownList {

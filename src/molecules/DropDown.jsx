@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DropDownButton from '../atoms/DropDownButton';
+import DropDownButton from '../atoms/DropDownButton/DropDownButton';
 import DropDownList from '../atoms/DropDownList';
 
 const DropDown = ({ regions, filterByRegion }) => {

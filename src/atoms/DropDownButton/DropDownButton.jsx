@@ -1,10 +1,10 @@
 import React from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+import { StyledDropDownButton } from './StyledDropDownButton';
 
 const DropDownButton = ({ handleDropDownButton, showRegions }) => {
   return (
-    <button
-      className='DropDownButton'
+    <StyledDropDownButton
       type="button" 
       id="dropdownMenuButton"
       onClick={handleDropDownButton}
@@ -15,7 +15,7 @@ const DropDownButton = ({ handleDropDownButton, showRegions }) => {
           ? <BsChevronUp /> 
           : <BsChevronDown />
       }
-    </button>
+    </StyledDropDownButton>
   )
 }
 
