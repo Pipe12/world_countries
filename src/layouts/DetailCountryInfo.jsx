@@ -1,6 +1,6 @@
 import React from 'react';
 import DetailCountryTitle from '../atoms/DetailCountryTitle';
-import DetailCountryBasic from '../atoms/DetailCountryBasic';
+import DetailCountryBasic from '../atoms/DetailCountryBasic/DetailCountryBasic';
 import DetailCountrySecundary from '../atoms/DetailCountrySecundary';
 import DetailCountryBorders from '../molecules/DetailCountryBorders';
 
