@@ -10,12 +10,6 @@
   justify-content: space-between;
 }
 
-.Header-title {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .Mode-CTA {
   background-color: transparent;
   border: none;
@@ -162,10 +156,6 @@
 @media only screen and (min-width: 992px) {
   .Header {
     padding: 0 80px;
-  }
-
-  .Header-title {
-    font-size: 24px;
   }
 
   .Main {

@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderTitle from '../atoms/HeaderTitle';
+import HeaderTitle from '../atoms/HeaderTitle/HeaderTitle';
 import ModeCTA from '../atoms/ModeCTA';
 
 const Header = ({ toggleTheme }) => {
