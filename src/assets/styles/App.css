@@ -155,11 +155,6 @@
   margin: 0 24px 0 24px;
 }
 
-.CountryDataKey {
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
 .DetailCountryLayout {
   background-color: var(--dark-mode-background);
   min-height: 100%;

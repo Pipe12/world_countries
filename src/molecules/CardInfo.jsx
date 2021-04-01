@@ -1,6 +1,6 @@
 import React from 'react';
 import CardTitle from '../atoms/CardTitle/CardTitle';
-import CountryData from '../atoms/CountryData';
+import CountryData from '../atoms/CountryData/CountryData';
 
 const CardInfo = ({ name, population, region, capital }) => {
   return (
