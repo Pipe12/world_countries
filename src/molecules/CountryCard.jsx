@@ -1,5 +1,5 @@
 import React from 'react';
-import CountryCardFlag from '../atoms/CountryCardFlag';
+import CountryCardFlag from '../atoms/CountryCardFlag/CountryCardFlag';
 import CardInfo from './CardInfo';
 
 const CountryCard = ({ country }) => {

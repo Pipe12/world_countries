@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledCountryFlag } from './StyledCountryCardFlag';
 
 const CountryCardFlag = ({ name, flag }) => {
   return (
-    <figure className='CountryCardFlag'>
+    <StyledCountryFlag className='CountryCardFlag'>
       <img src={flag} alt={name}/>
-    </figure>
+    </StyledCountryFlag>
   )
 }
 
