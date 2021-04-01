@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from 'react';
-import DetailCountrySubTitle from '../atoms/DetailCountrySubTitle';
+import DetailCountrySubTitle from '../atoms/DetailCountrySubtitle/DetailCountrySubTitle';
 import BordersButtonGroup from './BordersButtonGroup';
 import BorderButton from '../atoms/BorderButton/BorderButton';
 
