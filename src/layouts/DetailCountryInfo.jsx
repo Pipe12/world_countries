@@ -1,7 +1,7 @@
 import React from 'react';
 import DetailCountryTitle from '../atoms/DetailCountryTitle';
 import DetailCountryBasic from '../atoms/DetailCountryBasic/DetailCountryBasic';
-import DetailCountrySecundary from '../atoms/DetailCountrySecundary';
+import DetailCountrySecundary from '../atoms/DetailCountrySecundary/DetailCountrySecundary';
 import DetailCountryBorders from '../molecules/DetailCountryBorders';
 
 const DetailCountryInfo = ({ country }) => {

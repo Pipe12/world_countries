@@ -1,8 +1,9 @@
 import React from 'react';
+import { StyledDetailCountrySecundary } from './StyledDetailCountrySecundary';
 
 const DetailCountryBasic = ({ topLevelDomain, currencies, languages }) => {
   return (
-    <div className='DetailCountrySecundary'>
+    <StyledDetailCountrySecundary>
       <p><span className='CountryDataKey'>Top Level Domain:</span> {topLevelDomain}</p>
       <p>
         <span className='CountryDataKey'>Currencies: </span>
@@ -28,7 +29,7 @@ const DetailCountryBasic = ({ topLevelDomain, currencies, languages }) => {
           })
           }
       </p>
-    </div>
+    </StyledDetailCountrySecundary>
   )
 }
 
