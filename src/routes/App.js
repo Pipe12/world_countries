@@ -23,7 +23,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Skeleton toggleTheme={toggleTheme}>
+      <Skeleton toggleTheme={toggleTheme} theme={theme}>
         {
           <Router>
             <Switch>

@@ -10,21 +10,6 @@
   justify-content: space-between;
 }
 
-.Mode-CTA {
-  background-color: transparent;
-  border: none;
-  color: var(--dark-mode-text);
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 0;
-}
-
-.Mode-CTA__icon {
-  margin-right: 8px;
-}
-
 .Main {
   min-height: 100vh;
   /* background-color: var(--dark-mode-background); */
@@ -151,14 +136,6 @@
 
   .Main {
     padding: 0 80px 40px 80px;
-  }
-
-  .Mode-CTA {
-    font-size: 16px;
-  }
-
-  .Mode-CTA__icon {
-    margin-right: 12px;
   }
 
   .SearchLayout {
