@@ -1,9 +1,10 @@
 import React from 'react';
+import { StyledLoading } from './StyledLoading';
 
 const Loading = () => (
-  <div className='Loading'>
+  <StyledLoading>
     <h1>Loading...</h1>
-  </div>
+  </StyledLoading>
 )
 
 export default Loading;

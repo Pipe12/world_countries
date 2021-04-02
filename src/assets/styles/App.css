@@ -144,15 +144,6 @@
   text-align: center;
 }
 
-.Loading {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--dark-mode-text);
-}
-
 @media only screen and (min-width: 992px) {
   .Header {
     padding: 0 80px;

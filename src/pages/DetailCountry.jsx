@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Loading from '../atoms/Loading';
+import Loading from '../atoms/Loading/Loading';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
 import BackButton from '../atoms/BackButton/BackButton';
 import DetailCountryFlag from '../atoms/DetailCountryFlag/DetailCountryFlag';

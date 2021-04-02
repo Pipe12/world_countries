@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Main from '../molecules/Main';
 import { Regions } from '../utils/regions';
-import Loading from '../atoms/Loading';
+import Loading from '../atoms/Loading/Loading';
 
 const Home = () => {
 
