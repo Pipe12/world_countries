@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CountryCard from '../molecules/CountryCard';
+import { StyledCountriesLayout, StyledCountriesLayoutList, StylesdCountryCardLink } from './StyledCountriesLayout';
+import CountryCard from '../../molecules/CountryCard';
 
 const CountriesLayout = ({ countries }) => {
   return (
-    <section className='CountriesLayout'>
-      <ul className='CountriesLayout__list'>
+    <StyledCountriesLayout>
+      <StyledCountriesLayoutList>
         {
           countries.map((country, index) => 
-            <Link
+            <StylesdCountryCardLink
               to={`/country/${country.alpha3Code}`}
               className='CountryCard__link'
               key={index}
@@ -16,11 +16,11 @@ const CountriesLayout = ({ countries }) => {
               <li>
                 <CountryCard country={country}/>
               </li>
-            </Link>
+            </StylesdCountryCardLink>
           )
         }
-      </ul>
-    </section>
+      </StyledCountriesLayoutList>
+    </StyledCountriesLayout>
   )
 }
 

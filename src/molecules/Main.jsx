@@ -2,7 +2,7 @@ import React from 'react';
 import SearchLayout from '../layouts/SearchLayout';
 import Search from '../molecules/Search';
 import DropDown from '../molecules/DropDown';
-import CountriesLayout from '../layouts/CountriesLayout';
+import CountriesLayout from '../layouts/CountriesLayout/CountriesLayout';
 
 const Main = ({ countries, regions, filterByRegion, filterByCountry }) => {
   return (
