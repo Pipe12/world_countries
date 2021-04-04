@@ -60,10 +60,6 @@
   border-radius: 5px;
 }
 
-.CardInfo {
-  margin: 0 24px 0 24px;
-}
-
 .DetailCountryBorders {
   display: grid;
   gap: 24px;
