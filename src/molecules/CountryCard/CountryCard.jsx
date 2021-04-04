@@ -1,6 +1,7 @@
 import React from 'react';
-import CountryCardFlag from '../atoms/CountryCardFlag/CountryCardFlag';
-import CardInfo from './CardInfo/CardInfo';
+import { StyledCountryCard } from './StyledCountryCard';
+import CountryCardFlag from '../../atoms/CountryCardFlag/CountryCardFlag';
+import CardInfo from '../CardInfo/CardInfo';
 
 const CountryCard = ({ country }) => {
   const { 
@@ -11,7 +12,7 @@ const CountryCard = ({ country }) => {
           capital
         } = country
   return (
-    <div className='CountryCard'>
+    <StyledCountryCard>
       <CountryCardFlag
         name={name}
         flag={flag}
@@ -22,7 +23,7 @@ const CountryCard = ({ country }) => {
         region={region}
         capital={capital}
       />
-    </div>
+    </StyledCountryCard>
   )
 }
 

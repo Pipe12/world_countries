@@ -52,14 +52,6 @@
   z-index: 9;
 }
 
-.CountryCard {
-  border: 1px solid transparent;
-  overflow: hidden;
-  background-color: var(--dark-mode-element);
-  max-width: 265px;
-  border-radius: 5px;
-}
-
 .DetailCountryBorders {
   display: grid;
   gap: 24px;

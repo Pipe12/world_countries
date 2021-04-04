@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledCountriesLayout, StyledCountriesLayoutList, StylesdCountryCardLink } from './StyledCountriesLayout';
-import CountryCard from '../../molecules/CountryCard';
+import CountryCard from '../../molecules/CountryCard/CountryCard';
 
 const CountriesLayout = ({ countries }) => {
   return (
