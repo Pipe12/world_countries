@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledSearchLayout } from './StyledSearchLayout';
 
 const SearchLayout = ({ children }) => {
   return (
-    <div className='SearchLayout'>
+    <StyledSearchLayout>
       { children }
-    </div>
+    </StyledSearchLayout>
   )
 }
 

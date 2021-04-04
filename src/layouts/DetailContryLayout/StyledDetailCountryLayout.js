@@ -11,6 +11,7 @@ export const StyledDetailCountryLayout = styled.div`
   @media only screen and (min-width: 992px) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
+    padding: 80px;
     row-gap: 50px;
   }
 `

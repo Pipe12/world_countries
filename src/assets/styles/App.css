@@ -16,17 +16,7 @@
   padding: 0 16px 40px 16px;
 }
 
-.SearchLayout {
-  display: grid;
-  grid-template-rows: 50px 50px;
-
-  row-gap: 40px;
-  padding: 30px 0 30px 0;
-}
-
-.Search {
-  /* border: 1px solid red; */
-  
+.Search {  
   max-width: 480px;
   /* max-height: 17px; */
   padding: 16px 16px 16px 32px;
@@ -42,7 +32,6 @@
 }
 
 .Search__input {
-  /* border: 1px solid orange; */
   background-color: var(--dark-mode-element);
   color: var(--dark-mode-text);
   margin-left: 24px;
@@ -96,21 +85,12 @@
     padding: 0 80px 40px 80px;
   }
 
-  .SearchLayout {
-    grid-template-columns: 1fr 200px;
-    grid-template-rows: 55px;
-  }
-
   .Search__icon {
     width: 22px;
   }
 
   .Search__input {
     font-size: 14px;
-  }
-
-  .DetailCountryLayout {
-    padding: 80px;
   }
 
   .DetailCountryBorders {
