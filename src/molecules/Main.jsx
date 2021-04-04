@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchLayout from '../layouts/SearchLayout/SearchLayout';
 import Search from '../molecules/Search';
-import DropDown from '../molecules/DropDown';
+import DropDown from '../molecules/DropDown/DropDown';
 import CountriesLayout from '../layouts/CountriesLayout/CountriesLayout';
 
 const Main = ({ countries, regions, filterByRegion, filterByCountry }) => {

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import DropDownButton from '../atoms/DropDownButton/DropDownButton';
-import DropDownList from '../atoms/DropDownList/DropDownList';
+import { StyledDropDown } from './StyledDropDown';
+import DropDownButton from '../../atoms/DropDownButton/DropDownButton';
+import DropDownList from '../../atoms/DropDownList/DropDownList';
 
 const DropDown = ({ regions, filterByRegion }) => {
   const [showRegions, setShowRegions] = useState(false);
 
   const handleDropDownButton = () => setShowRegions(!showRegions);
   return (
-    <div className='DropDown'>
+    <StyledDropDown>
       <DropDownButton 
         handleDropDownButton={ handleDropDownButton }
         showRegions={showRegions}
@@ -17,7 +18,7 @@ const DropDown = ({ regions, filterByRegion }) => {
           ? <DropDownList regions={regions} filterByRegion={filterByRegion}/> 
           : null
       }
-    </div>
+    </StyledDropDown>
   )
 }
 
