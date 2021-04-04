@@ -75,15 +75,6 @@
   margin: 0 24px 0 24px;
 }
 
-.DetailCountryLayout {
-  background-color: var(--dark-mode-background);
-  min-height: 100%;
-  padding: 40px 28px 64px 28px;
-  display: grid;
-  row-gap: 50px;
-  justify-items: start;
-}
-
 .DetailCountryBorders {
   display: grid;
   gap: 24px;
@@ -120,12 +111,6 @@
 
   .DetailCountryLayout {
     padding: 80px;
-  }
-
-  .DetailCountryLayout {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 80px;
-    row-gap: 50px;
   }
 
   .DetailCountryBorders {

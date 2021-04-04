@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledDetailCountryLayout } from './StyledDetailCountryLayout';
 
 const DetailCountryLayout = ({ children }) => {
   return (
-    <div className='DetailCountryLayout'>
+    <StyledDetailCountryLayout>
       { children }
-    </div>
+    </StyledDetailCountryLayout>
   )
 }
 
