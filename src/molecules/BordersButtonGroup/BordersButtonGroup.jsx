@@ -1,11 +1,12 @@
 import React from 'react';
+import { StyledBordersButtonGroup } from './StyledBordersButtonGroup'
 
 const BordersButtonGroup = ({ children }) => {
 
   return (
-    <div className='BordersButtonGroup'>
+    <StyledBordersButtonGroup>
       { children }
-    </div>
+    </StyledBordersButtonGroup>
   )
 }
 

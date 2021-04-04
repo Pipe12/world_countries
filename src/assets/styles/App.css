@@ -69,13 +69,6 @@
   gap: 24px;
 }
 
-.BordersButtonGroup {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  gap: 10px;
-  text-align: center;
-}
-
 @media only screen and (min-width: 992px) {
   .Header {
     padding: 0 80px;
