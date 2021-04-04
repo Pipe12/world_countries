@@ -84,13 +84,6 @@
   justify-items: start;
 }
 
-.DetailCountryInfo {
-  display: grid;
-  row-gap: 30px;
-  color: var(--dark-mode-text);
-  width: 100%;
-}
-
 .DetailCountryBorders {
   display: grid;
   gap: 24px;
@@ -127,13 +120,6 @@
 
   .DetailCountryLayout {
     padding: 80px;
-  }
-
-  .DetailCountryInfo {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 40px;
   }
 
   .DetailCountryLayout {

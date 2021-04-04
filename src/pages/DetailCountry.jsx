@@ -4,7 +4,7 @@ import Loading from '../atoms/Loading/Loading';
 import DetailCountryLayout from '../layouts/DetailCountryLayout';
 import BackButton from '../atoms/BackButton/BackButton';
 import DetailCountryFlag from '../atoms/DetailCountryFlag/DetailCountryFlag';
-import DetailCountryInfo from '../layouts/DetailCountryInfo';
+import DetailCountryInfo from '../layouts/DetailCountryInfo/DetailCountryInfo';
 
 const DetailCountry = () => {
   const { alpha3Code } = useParams();
