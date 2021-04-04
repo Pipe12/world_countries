@@ -3,7 +3,7 @@ import { StyledDetailCountryInfo } from './StyledDetailCountryInfo';
 import DetailCountryTitle from '../../atoms/DetailCountryTitle/DetailCountryTitle';
 import DetailCountryBasic from '../../atoms/DetailCountryBasic/DetailCountryBasic';
 import DetailCountrySecundary from '../../atoms/DetailCountrySecundary/DetailCountrySecundary';
-import DetailCountryBorders from '../../molecules/DetailCountryBorders';
+import DetailCountryBorders from '../../molecules/DetailCountryBorders/DetailCountryBorders';
 
 const DetailCountryInfo = ({ country }) => {
   return (

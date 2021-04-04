@@ -52,11 +52,6 @@
   z-index: 9;
 }
 
-.DetailCountryBorders {
-  display: grid;
-  gap: 24px;
-}
-
 @media only screen and (min-width: 992px) {
   .Header {
     padding: 0 80px;
@@ -72,11 +67,5 @@
 
   .Search__input {
     font-size: 14px;
-  }
-
-  .DetailCountryBorders {
-    grid-template-columns: 130px 1fr;
-    gap: 16px;
-    grid-column: 1 / 3;
   }
 }
