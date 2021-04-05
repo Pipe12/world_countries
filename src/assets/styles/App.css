@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-.Main {
-  min-height: 100vh;
-  /* background-color: var(--dark-mode-background); */
-  padding: 0 16px 40px 16px;
-}
-
 .Search {  
   max-width: 480px;
   /* max-height: 17px; */
@@ -38,10 +32,6 @@
 }
 
 @media only screen and (min-width: 992px) {
-  .Header {
-    padding: 0 80px;
-  }
-
   .Main {
     padding: 0 80px 40px 80px;
   }

@@ -1,12 +1,13 @@
 import React from 'react';
-import SearchLayout from '../layouts/SearchLayout/SearchLayout';
-import Search from '../molecules/Search';
-import DropDown from '../molecules/DropDown/DropDown';
-import CountriesLayout from '../layouts/CountriesLayout/CountriesLayout';
+import { StyledMain } from './StyledMain';
+import SearchLayout from '../../layouts/SearchLayout/SearchLayout';
+import Search from '../Search';
+import DropDown from '../DropDown/DropDown';
+import CountriesLayout from '../../layouts/CountriesLayout/CountriesLayout';
 
 const Main = ({ countries, regions, filterByRegion, filterByCountry }) => {
   return (
-    <main className='Main'>
+    <StyledMain>
       <SearchLayout>
         <Search
           filterByCountry={filterByCountry}
@@ -17,7 +18,7 @@ const Main = ({ countries, regions, filterByRegion, filterByCountry }) => {
         />
       </SearchLayout>
       <CountriesLayout countries={ countries } />
-    </main>
+    </StyledMain>
   )
 }
 

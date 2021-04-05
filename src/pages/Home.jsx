@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Main from '../molecules/Main';
+import Main from '../molecules/Main/Main';
 import { Regions } from '../utils/regions';
 import Loading from '../atoms/Loading/Loading';
 
