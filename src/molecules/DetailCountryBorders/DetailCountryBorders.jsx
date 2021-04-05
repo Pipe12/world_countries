@@ -1,4 +1,5 @@
 import React, { useState, useEffect }from 'react';
+import { StyledDetailCountryBorders } from './StyledDetailCountryBorders';
 import DetailCountrySubTitle from '../../atoms/DetailCountrySubtitle/DetailCountrySubTitle';
 import BordersButtonGroup from '../BordersButtonGroup/BordersButtonGroup';
 import BorderButton from '../../atoms/BorderButton/BorderButton';
@@ -24,7 +25,7 @@ const DetailCountryBorders = ({ borders }) => {
   }, [ url ]);
 
   return (
-    <div className='DetailCountryBorders'>
+    <StyledDetailCountryBorders>
       <DetailCountrySubTitle text='Border Countries:' />
       <BordersButtonGroup>
         {
@@ -42,7 +43,7 @@ const DetailCountryBorders = ({ borders }) => {
             : null
         }
       </BordersButtonGroup>
-    </div>
+    </StyledDetailCountryBorders>
   )
 }
 
