@@ -11,4 +11,5 @@ export const StyledBorderButton = styled(Link)`
   color: var(${({theme}) => theme.text});
   padding: 10px 16px 10px 16px;
   text-decoration: none;
+  box-shadow: 0px 2px 10px 0px var(${({ theme }) => theme.shadow});
 `

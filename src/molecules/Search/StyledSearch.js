@@ -9,6 +9,7 @@ export const StyledSearch = styled.div`
   display: flex;
   align-items: center;
   border-radius: 5px;
+  box-shadow: 0px 2px 10px 0px var(${({ theme }) => theme.shadow});
 
   &:focus {
     outline: red;

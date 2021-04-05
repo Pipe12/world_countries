@@ -13,6 +13,7 @@ export const StyledBackButton = styled.button`
   justify-content: center;
   cursor: pointer;
   padding: 10px 24px 10px 24px;
+  box-shadow: 0px 2px 10px 0px var(${({ theme }) => theme.shadow});
 
   @media only screen and (min-width: 992px) {
     font-size: 16px;

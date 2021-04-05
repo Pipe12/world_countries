@@ -9,6 +9,7 @@ export const StyledDropDownList = styled.ul`
   font-size: 12px;
   list-style: none;
   line-height: 32px;
+  box-shadow: 0px 2px 10px 0px var(${({ theme }) => theme.shadow});
 
   li {
     color: var(${({theme}) => theme.text});
