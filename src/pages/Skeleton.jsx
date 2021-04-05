@@ -1,4 +1,4 @@
-import Header from '../molecules/Header';
+import Header from '../molecules/Header/Header';
 
 const Skeleton = ({ children, toggleTheme, theme }) => {
 

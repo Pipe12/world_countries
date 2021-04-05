@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-.Header {
-  background-color: var(--dark-mode-element);
-  color: var(--dark-mode-text);
-  padding: 0 16px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .Main {
   min-height: 100vh;
   /* background-color: var(--dark-mode-background); */
