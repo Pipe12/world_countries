@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledDetailCountryLayout = styled.div`
-  background-color: var(${({ theme }) => theme.backgroundBody});
   min-height: 100%;
   padding: 40px 28px 64px 28px;
   display: grid;
