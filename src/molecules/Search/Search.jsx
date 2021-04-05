@@ -1,10 +1,10 @@
 import React from 'react';
-import { BsSearch } from 'react-icons/bs';
+import { StyledSearch, StyledBsSearch } from './StyledSearch';
 
 const Search = ({ filterByCountry }) => {
   return (
-    <div className='Search'>
-      <BsSearch className='Search__icon'/>
+    <StyledSearch>
+      <StyledBsSearch/>
       <input 
         className='Search__input'
         type='text'
@@ -12,7 +12,7 @@ const Search = ({ filterByCountry }) => {
         placeholder='Searck for a country...'
         onChange={filterByCountry}
       />
-    </div>
+    </StyledSearch>
   )
 }
 
