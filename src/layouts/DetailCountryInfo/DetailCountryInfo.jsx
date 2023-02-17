@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledDetailCountryInfo } from './StyledDetailCountryInfo';
 import DetailCountryTitle from '../../atoms/DetailCountryTitle/DetailCountryTitle';
 import DetailCountryBasic from '../../atoms/DetailCountryBasic/DetailCountryBasic';
-import DetailCountrySecundary from '../../atoms/DetailCountrySecundary/DetailCountrySecundary';
+import DetailCountrySecondary from '../../atoms/DetailCountrySecondary/DetailCountrySecondary';
 import DetailCountryBorders from '../../molecules/DetailCountryBorders/DetailCountryBorders';
 
 const DetailCountryInfo = ({ country }) => {
@@ -10,7 +10,7 @@ const DetailCountryInfo = ({ country }) => {
     <StyledDetailCountryInfo>
       <DetailCountryTitle {...country} />
       <DetailCountryBasic {...country}/>
-      <DetailCountrySecundary {...country} />
+      <DetailCountrySecondary {...country} />
       <DetailCountryBorders {...country}/>
     </StyledDetailCountryInfo>
   )

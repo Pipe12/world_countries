@@ -10,7 +10,7 @@ const CardInfo = ({ name, population, region, capital }) => {
       <CountryData  
         population={population} 
         region={region}
-        captial={capital}
+        capital={capital}
       />
     </StyledCardInfo>
   )

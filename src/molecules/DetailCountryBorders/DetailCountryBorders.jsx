@@ -6,10 +6,13 @@ import BorderButton from '../../atoms/BorderButton/BorderButton';
 
 const DetailCountryBorders = ({ borders }) => {
   
+  console.log(borders)
   const [countryBorders, setCountryBorders] = useState([]);
 
-  borders = borders.join(';');
-  const  url = `https://restcountries.eu/rest/v2/alpha?codes=${borders}`;
+  if(borders?.length) {
+    borders = borders.join(',');
+  }
+  const  url = `https://restcountries.com/v2/alpha?codes=${borders}`;
 
   useEffect(() => {
     const fetchCountry = async () => {

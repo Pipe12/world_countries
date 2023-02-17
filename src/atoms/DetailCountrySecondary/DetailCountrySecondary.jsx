@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyledDetailCountrySecundary } from './StyledDetailCountrySecundary';
+import { StyledDetailCountrySecondary } from './StyledDetailCountrySecondary';
 
-const DetailCountryBasic = ({ topLevelDomain, currencies, languages }) => {
+const DetailCountrySecondary = ({ topLevelDomain, currencies, languages }) => {
   return (
-    <StyledDetailCountrySecundary>
+    <StyledDetailCountrySecondary>
       <p><span className='CountryDataKey'>Top Level Domain:</span> {topLevelDomain}</p>
       <p>
         <span className='CountryDataKey'>Currencies: </span>
@@ -29,8 +29,8 @@ const DetailCountryBasic = ({ topLevelDomain, currencies, languages }) => {
           })
           }
       </p>
-    </StyledDetailCountrySecundary>
+    </StyledDetailCountrySecondary>
   )
 }
 
-export default DetailCountryBasic;
+export default DetailCountrySecondary;

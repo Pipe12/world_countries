@@ -5,7 +5,7 @@ import Loading from '../atoms/Loading/Loading';
 
 const Home = () => {
 
-  const url = 'https://restcountries.eu/rest/v2/all';
+  const url = 'https://restcountries.com/v2/all';
 
   const [regions, setRegions] = useState([]);
   const [loading, setLoading] = useState(true);

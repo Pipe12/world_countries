@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledCountryData } from './StyledCountryData';
 
-const CountryData = ({population, region, captial}) => {
+const CountryData = ({population, region, capital}) => {
   return (
     <StyledCountryData>
       <p>
@@ -11,7 +11,7 @@ const CountryData = ({population, region, captial}) => {
         <span>Region:</span> {region}
       </p>
       <p>
-        <span>Captial:</span> {captial}
+        <span>Capital:</span> {capital}
       </p>
     </StyledCountryData>
   )

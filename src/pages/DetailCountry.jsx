@@ -11,7 +11,7 @@ const DetailCountry = () => {
   const [loading, setLoading] = useState(true);
   const [country, setCountry] = useState([])
 
-  const url = `https://restcountries.eu/rest/v2/alpha/${alpha3Code}`;
+  const url = `https://restcountries.com/v2/alpha/${alpha3Code}`;
 
   useEffect(() => {
     const fetchCountry = async () => {
