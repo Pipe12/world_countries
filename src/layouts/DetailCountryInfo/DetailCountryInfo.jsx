@@ -9,11 +9,11 @@ const DetailCountryInfo = ({ country }) => {
   return (
     <StyledDetailCountryInfo>
       <DetailCountryTitle {...country} />
-      <DetailCountryBasic {...country}/>
+      <DetailCountryBasic {...country} />
       <DetailCountrySecondary {...country} />
-      <DetailCountryBorders {...country}/>
+      <DetailCountryBorders {...country} />
     </StyledDetailCountryInfo>
-  )
-}
+  );
+};
 
 export default DetailCountryInfo;

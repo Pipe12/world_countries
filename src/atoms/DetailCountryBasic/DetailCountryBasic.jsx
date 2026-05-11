@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyledDetailCountryBasic } from './StyledDetailCountryBasic';
 
-const DetailCountryBasic = ({ nativeName, population, subregion, capital }) => {  
+const DetailCountryBasic = ({ name, population, subregion, capital }) => {
   return (
     <StyledDetailCountryBasic>
       <p>
-        <span>Native Name:</span> {nativeName}
+        {/* TODO: Display native name */}
+        <span>Native Name:</span> {name.common}
       </p>
       <p>
         <span>Population:</span> {population}
@@ -17,7 +18,7 @@ const DetailCountryBasic = ({ nativeName, population, subregion, capital }) => {
         <span>Capital:</span> {capital}
       </p>
     </StyledDetailCountryBasic>
-  )
-}
+  );
+};
 
 export default DetailCountryBasic;

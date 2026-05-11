@@ -7,11 +7,11 @@ import DetailCountryFlag from '../atoms/DetailCountryFlag/DetailCountryFlag';
 import DetailCountryInfo from '../layouts/DetailCountryInfo/DetailCountryInfo';
 
 const DetailCountry = () => {
-  const { alpha3Code } = useParams();
+  const { countryName } = useParams();
   const [loading, setLoading] = useState(true);
-  const [country, setCountry] = useState([])
+  const [country, setCountry] = useState([]);
 
-  const url = `https://restcountries.com/v2/alpha/${alpha3Code}`;
+  const url = `https://restcountries.com/v3.1/name/${countryName}`;
 
   useEffect(() => {
     const fetchCountry = async () => {
@@ -19,33 +19,30 @@ const DetailCountry = () => {
       try {
         const response = await fetch(url);
         const country = await response.json();
-        setCountry(country);
+        setCountry(country[0]);
         setLoading(false);
       } catch (error) {
-        console.error(error); 
+        console.error(error);
       }
-    }
+    };
     fetchCountry();
-  }, [ url ]);
+  }, [url]);
 
   return (
     <>
-      {
-        loading 
-          ? <Loading />
-          : <>
-              <DetailCountryLayout>
-                <BackButton />
-                <DetailCountryFlag
-                  name={country.name}
-                  flag={country.flag}
-                />
-                <DetailCountryInfo country={country}/>
-              </DetailCountryLayout>
-            </>
-      }
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <DetailCountryLayout>
+            <BackButton />
+            <DetailCountryFlag name={country.name} flags={country.flags} />
+            <DetailCountryInfo country={country} />
+          </DetailCountryLayout>
+        </>
+      )}
     </>
-  )
-}
+  );
+};
 
 export default DetailCountry;

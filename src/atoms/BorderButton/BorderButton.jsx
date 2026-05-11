@@ -1,15 +1,13 @@
 import React from 'react';
 import { StyledBorderButton } from './StyledBorderButton';
 
-const BorderButton = ({ alpha3Code, name }) => {
+const BorderButton = ({ name }) => {
+  console.log({ name });
   return (
-    <StyledBorderButton
-      to={`/country/${alpha3Code}`}
-      className='BorderButton'
-    >
-      {name}
+    <StyledBorderButton to={`/country/${name.common}`} className='BorderButton'>
+      {name.common}
     </StyledBorderButton>
-  )
-}
+  );
+};
 
 export default BorderButton;
