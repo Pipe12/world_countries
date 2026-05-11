@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const StyledCountriesLayout = styled.section`
   margin-bottom: 24px;
-`
+`;
 
 export const StyledCountriesLayoutList = styled.ul`
   list-style: none;
@@ -14,15 +14,14 @@ export const StyledCountriesLayoutList = styled.ul`
   grid-auto-columns: 256px;
   gap: 40px 40px;
   justify-content: center;
-`
+`;
 
-export const StylesdCountryCardLink = styled(Link)`
+export const StyledCountryCardLink = styled(Link)`
   color: var(${({ theme }) => theme.text});
   text-decoration: none;
   border-radius: 5px;
 
-  li{
+  li {
     width: fit-content;
   }
-`
-
+`;

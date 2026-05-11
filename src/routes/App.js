@@ -9,16 +9,15 @@ import DetailCountry from '../pages/DetailCountry';
 import '../assets/styles/App.css';
 
 function App() {
-
   const [theme, setTheme] = useState('dark');
 
   const toggleTheme = () => {
-    if(theme === 'dark') {
+    if (theme === 'dark') {
       setTheme('light');
     } else {
       setTheme('dark');
     }
-  }
+  };
 
   return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
@@ -28,7 +27,11 @@ function App() {
           <Router>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/country/:alpha3Code' component={DetailCountry} />
+              <Route
+                exact
+                path='/country/:countryName'
+                component={DetailCountry}
+              />
             </Switch>
           </Router>
         }

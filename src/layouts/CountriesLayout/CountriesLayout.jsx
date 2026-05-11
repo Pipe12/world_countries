@@ -1,27 +1,29 @@
 import React from 'react';
-import { StyledCountriesLayout, StyledCountriesLayoutList, StylesdCountryCardLink } from './StyledCountriesLayout';
+import {
+  StyledCountriesLayout,
+  StyledCountriesLayoutList,
+  StyledCountryCardLink,
+} from './StyledCountriesLayout';
 import CountryCard from '../../molecules/CountryCard/CountryCard';
 
 const CountriesLayout = ({ countries }) => {
   return (
     <StyledCountriesLayout>
       <StyledCountriesLayoutList>
-        {
-          countries.map((country, index) => 
-            <StylesdCountryCardLink
-              to={`/country/${country.alpha3Code}`}
-              className='CountryCard__link'
-              key={index}
-            >
-              <li>
-                <CountryCard country={country}/>
-              </li>
-            </StylesdCountryCardLink>
-          )
-        }
+        {countries.map((country, index) => (
+          <StyledCountryCardLink
+            to={`/country/${country.name.common}`}
+            className='CountryCard__link'
+            key={index}
+          >
+            <li>
+              <CountryCard country={country} />
+            </li>
+          </StyledCountryCardLink>
+        ))}
       </StyledCountriesLayoutList>
     </StyledCountriesLayout>
-  )
-}
+  );
+};
 
 export default CountriesLayout;
