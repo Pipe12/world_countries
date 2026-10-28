@@ -2,38 +2,38 @@ import React, { useState, useEffect } from "react";
 import Main from "../molecules/Main/Main";
 import { Regions } from "../utils/regions";
 import Loading from "../atoms/Loading/Loading";
+import { BASE_URL, PATH_COUNTRIES } from "../constants/api";
+
+const url = `${BASE_URL}${PATH_COUNTRIES}?response_fields=names,capital,currencies,flag,population,region,subregion,languages&limit=50`;
+const options = {
+  headers: {
+    Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
+  },
+};
 
 const Home = () => {
-  const url =
-    "https://api.restcountries.com/countries/v5?response_fields=names,capital,currencies,flag,population,region,subregion,languages&limit=50";
-  const options = {
-    headers: {
-      Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
-    },
-  };
-
   const [regions, setRegions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [countries, setCountries] = useState([]);
   const [countriesRef, setCountriesRef] = useState([]);
 
-  const fetchCountries = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(url, options);
-      const json = await response.json();
-
-      const countries = [...json.data.objects];
-
-      setCountries(countries);
-      setCountriesRef(countries);
-      setLoading(false);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchCountries = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(url, options);
+        const json = await response.json();
+
+        const countries = [...json.data.objects];
+
+        setCountries(countries);
+        setCountriesRef(countries);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     fetchCountries();
   }, []);
 

@@ -5,19 +5,20 @@ import DetailCountryLayout from "../layouts/DetailContryLayout/DetailCountryLayo
 import BackButton from "../atoms/BackButton/BackButton";
 import DetailCountryFlag from "../atoms/DetailCountryFlag/DetailCountryFlag";
 import DetailCountryInfo from "../layouts/DetailCountryInfo/DetailCountryInfo";
+import { BASE_URL, PATH_NAMES } from "../constants/api";
+
+const options = {
+  headers: {
+    Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
+  },
+};
 
 const DetailCountry = () => {
   const { countryName } = useParams();
   const [loading, setLoading] = useState(true);
   const [country, setCountry] = useState([]);
 
-  const url = `https://api.restcountries.com/countries/v5/names.common/${countryName}`;
-
-  const options = {
-    headers: {
-      Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
-    },
-  };
+  const url = `${BASE_URL}${PATH_NAMES}${countryName}`;
 
   useEffect(() => {
     const fetchCountry = async () => {
