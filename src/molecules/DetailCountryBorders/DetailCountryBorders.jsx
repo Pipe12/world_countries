@@ -3,13 +3,7 @@ import { StyledDetailCountryBorders } from "./StyledDetailCountryBorders";
 import DetailCountrySubTitle from "../../atoms/DetailCountrySubtitle/DetailCountrySubTitle";
 import BordersButtonGroup from "../BordersButtonGroup/BordersButtonGroup";
 import BorderButton from "../../atoms/BorderButton/BorderButton";
-import { BASE_URL, PATH_BORDERS } from "../../constants/api";
-
-const options = {
-  headers: {
-    Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
-  },
-};
+import { BASE_URL, PATH_BORDERS, API_OPTIONS } from "../../constants/api";
 
 const DetailCountryBorders = ({ codes }) => {
   const [countryBorders, setCountryBorders] = useState([]);
@@ -20,7 +14,7 @@ const DetailCountryBorders = ({ codes }) => {
   useEffect(() => {
     const fetchCountry = async () => {
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url, API_OPTIONS);
         const json = await response.json();
 
         const countryBorders = json.data.objects;

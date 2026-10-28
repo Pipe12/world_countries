@@ -5,13 +5,7 @@ import DetailCountryLayout from "../layouts/DetailContryLayout/DetailCountryLayo
 import BackButton from "../atoms/BackButton/BackButton";
 import DetailCountryFlag from "../atoms/DetailCountryFlag/DetailCountryFlag";
 import DetailCountryInfo from "../layouts/DetailCountryInfo/DetailCountryInfo";
-import { BASE_URL, PATH_NAMES } from "../constants/api";
-
-const options = {
-  headers: {
-    Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
-  },
-};
+import { BASE_URL, PATH_NAMES, API_OPTIONS } from "../constants/api";
 
 const DetailCountry = () => {
   const { countryName } = useParams();
@@ -24,7 +18,7 @@ const DetailCountry = () => {
     const fetchCountry = async () => {
       setLoading(true);
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url, API_OPTIONS);
         const json = await response.json();
 
         const country = [...json.data.objects];

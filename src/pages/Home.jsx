@@ -2,14 +2,9 @@ import React, { useState, useEffect } from "react";
 import Main from "../molecules/Main/Main";
 import { Regions } from "../utils/regions";
 import Loading from "../atoms/Loading/Loading";
-import { BASE_URL, PATH_COUNTRIES } from "../constants/api";
+import { BASE_URL, PATH_COUNTRIES, API_OPTIONS } from "../constants/api";
 
 const url = `${BASE_URL}${PATH_COUNTRIES}?response_fields=names,capital,currencies,flag,population,region,subregion,languages&limit=50`;
-const options = {
-  headers: {
-    Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
-  },
-};
 
 const Home = () => {
   const [regions, setRegions] = useState([]);
@@ -21,7 +16,7 @@ const Home = () => {
     const fetchCountries = async () => {
       setLoading(true);
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url, API_OPTIONS);
         const json = await response.json();
 
         const countries = [...json.data.objects];
