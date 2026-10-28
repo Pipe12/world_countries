@@ -1,7 +1,7 @@
-import React from 'react';
-import { StyledDetailCountrySecondary } from './StyledDetailCountrySecondary';
+import React from "react";
+import { StyledDetailCountrySecondary } from "./StyledDetailCountrySecondary";
 
-const DetailCountrySecondary = ({ tld, currencies, languages }) => {
+const DetailCountrySecondary = ({ tlds, currencies, languages }) => {
   const getCurrencyNames = (currencies) =>
     Object.values(currencies).map((c) => c.name);
 
@@ -10,7 +10,7 @@ const DetailCountrySecondary = ({ tld, currencies, languages }) => {
   return (
     <StyledDetailCountrySecondary>
       <p>
-        <span className='CountryDataKey'>Top Level Domain:</span> {tld[0]}
+        <span className='CountryDataKey'>Top Level Domain:</span> {tlds[0]}
       </p>
       <p>
         <span className='CountryDataKey'>Currencies: </span>
@@ -26,9 +26,9 @@ const DetailCountrySecondary = ({ tld, currencies, languages }) => {
         <span className='CountryDataKey'>Languages: </span>
         {getLanguageNames(languages).map((language, index) => {
           return getLanguageNames(languages).length === index + 1 ? (
-            <span key={index}> {language}</span>
+            <span key={index}> {language.name}</span>
           ) : (
-            <span key={index}> {language}, </span>
+            <span key={index}> {language.name}, </span>
           );
         })}
       </p>

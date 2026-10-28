@@ -1,10 +1,10 @@
-import React from 'react';
-import { StyledCountryFlag } from './StyledCountryCardFlag';
+import React from "react";
+import { StyledCountryFlag } from "./StyledCountryCardFlag";
 
-const CountryCardFlag = ({ name, flags }) => {
+const CountryCardFlag = ({ name, flag }) => {
   return (
     <StyledCountryFlag className='CountryCardFlag'>
-      <img src={flags.png} alt={name.common} />
+      <img src={flag.url_png} alt={name.common} />
     </StyledCountryFlag>
   );
 };

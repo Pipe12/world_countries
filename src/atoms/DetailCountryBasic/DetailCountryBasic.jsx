@@ -1,12 +1,12 @@
-import React from 'react';
-import { StyledDetailCountryBasic } from './StyledDetailCountryBasic';
+import React from "react";
+import { StyledDetailCountryBasic } from "./StyledDetailCountryBasic";
 
-const DetailCountryBasic = ({ name, population, subregion, capital }) => {
+const DetailCountryBasic = ({ names, population, subregion, capital }) => {
   return (
     <StyledDetailCountryBasic>
       <p>
         {/* TODO: Display native name */}
-        <span>Native Name:</span> {name.common}
+        <span>Native Name:</span> {names.common}
       </p>
       <p>
         <span>Population:</span> {population}

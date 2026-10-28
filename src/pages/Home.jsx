@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Main from '../molecules/Main/Main';
-import { Regions } from '../utils/regions';
-import Loading from '../atoms/Loading/Loading';
+import React, { useState, useEffect } from "react";
+import Main from "../molecules/Main/Main";
+import { Regions } from "../utils/regions";
+import Loading from "../atoms/Loading/Loading";
 
 const Home = () => {
   const url =
-    'https://restcountries.com/v3.1/all?fields=name,capital,currencies,flags,population,region,subregion,languages';
+    "https://api.restcountries.com/countries/v5?response_fields=names,capital,currencies,flag,population,region,subregion,languages&limit=50";
+  const options = {
+    headers: {
+      Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
+    },
+  };
 
   const [regions, setRegions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,8 +20,11 @@ const Home = () => {
   const fetchCountries = async () => {
     setLoading(true);
     try {
-      const response = await fetch(url);
-      const countries = await response.json();
+      const response = await fetch(url, options);
+      const json = await response.json();
+
+      const countries = [...json.data.objects];
+
       setCountries(countries);
       setCountriesRef(countries);
       setLoading(false);
@@ -44,7 +52,7 @@ const Home = () => {
     let PATTERN = event.target.value;
     PATTERN = PATTERN.charAt(0).toUpperCase() + PATTERN.slice(1);
     let filtered = countriesRef.filter((country) =>
-      country.name.common.includes(PATTERN),
+      country.names.common.includes(PATTERN),
     );
     setCountries(filtered);
   };

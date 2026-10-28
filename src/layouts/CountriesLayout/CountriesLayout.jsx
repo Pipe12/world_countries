@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import {
   StyledCountriesLayout,
   StyledCountriesLayoutList,
   StyledCountryCardLink,
-} from './StyledCountriesLayout';
-import CountryCard from '../../molecules/CountryCard/CountryCard';
+} from "./StyledCountriesLayout";
+import CountryCard from "../../molecules/CountryCard/CountryCard";
 
 const CountriesLayout = ({ countries }) => {
   return (
@@ -12,7 +12,7 @@ const CountriesLayout = ({ countries }) => {
       <StyledCountriesLayoutList>
         {countries.map((country, index) => (
           <StyledCountryCardLink
-            to={`/country/${country.name.common}`}
+            to={`/country/${country.names.common}`}
             className='CountryCard__link'
             key={index}
           >

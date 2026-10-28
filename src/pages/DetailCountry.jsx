@@ -1,24 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Loading from '../atoms/Loading/Loading';
-import DetailCountryLayout from '../layouts/DetailContryLayout/DetailCountryLayout';
-import BackButton from '../atoms/BackButton/BackButton';
-import DetailCountryFlag from '../atoms/DetailCountryFlag/DetailCountryFlag';
-import DetailCountryInfo from '../layouts/DetailCountryInfo/DetailCountryInfo';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Loading from "../atoms/Loading/Loading";
+import DetailCountryLayout from "../layouts/DetailContryLayout/DetailCountryLayout";
+import BackButton from "../atoms/BackButton/BackButton";
+import DetailCountryFlag from "../atoms/DetailCountryFlag/DetailCountryFlag";
+import DetailCountryInfo from "../layouts/DetailCountryInfo/DetailCountryInfo";
 
 const DetailCountry = () => {
   const { countryName } = useParams();
   const [loading, setLoading] = useState(true);
   const [country, setCountry] = useState([]);
 
-  const url = `https://restcountries.com/v3.1/name/${countryName}`;
+  const url = `https://api.restcountries.com/countries/v5/names.common/${countryName}`;
+
+  const options = {
+    headers: {
+      Authorization: "Bearer rc_live_e804b61b9e1d491ca8f6508c833ecac1",
+    },
+  };
 
   useEffect(() => {
     const fetchCountry = async () => {
       setLoading(true);
       try {
-        const response = await fetch(url);
-        const country = await response.json();
+        const response = await fetch(url, options);
+        const json = await response.json();
+
+        const country = [...json.data.objects];
+
         setCountry(country[0]);
         setLoading(false);
       } catch (error) {
@@ -36,7 +45,7 @@ const DetailCountry = () => {
         <>
           <DetailCountryLayout>
             <BackButton />
-            <DetailCountryFlag name={country.name} flags={country.flags} />
+            <DetailCountryFlag names={country.names} flag={country.flag} />
             <DetailCountryInfo country={country} />
           </DetailCountryLayout>
         </>

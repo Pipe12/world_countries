@@ -1,15 +1,16 @@
-import React from 'react';
-import { StyledCountryCard } from './StyledCountryCard';
-import CountryCardFlag from '../../atoms/CountryCardFlag/CountryCardFlag';
-import CardInfo from '../CardInfo/CardInfo';
+import React from "react";
+import { StyledCountryCard } from "./StyledCountryCard";
+import CountryCardFlag from "../../atoms/CountryCardFlag/CountryCardFlag";
+import CardInfo from "../CardInfo/CardInfo";
 
 const CountryCard = ({ country }) => {
-  const { name, flags, population, region, capital } = country;
+  const { names, flag, population, region, capital } = country;
+
   return (
     <StyledCountryCard>
-      <CountryCardFlag name={name} flags={flags} />
+      <CountryCardFlag name={names.common} flag={flag} />
       <CardInfo
-        name={name.common}
+        name={names.common}
         population={population}
         region={region}
         capital={capital}
